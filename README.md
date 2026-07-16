@@ -40,6 +40,30 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 
 ![PCB Progress - IMU](images/IMU-layout.png)
 
+## Design Decisions
+
+### Why STM32F405?
+
+The STM32F405 was selected because it provides:
+- Sufficient processing power for flight control
+- Native USB support
+- Compatibility with ArduPilot
+- Large community support
+
+### Why SPI for IMU?
+
+SPI was selected over I2C due to:
+- Higher bandwidth
+- Lower latency
+- Better reliability for high-rate sensor data
+
+## Lessons Learned
+
+- Proper power filtering is critical for sensor accuracy
+- PCB layout affects IMU noise performance
+- Hardware debugging requires systematic testing
+- Documentation is as important as design
+  
 ## Goals
 
 The objective of this project is to design a flight controller from scratch while learning PCB design, embedded systems, and hardware debugging.
