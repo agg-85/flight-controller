@@ -59,10 +59,10 @@ SPI was selected over I2C due to:
 
 ## Lessons Learned
 
-- Proper power filtering is critical for sensor accuracy
-- PCB layout affects IMU noise performance
-- Hardware debugging requires systematic testing
-- Documentation is as important as design
+- SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag.
+-  IMU enhances GPS reliability in tunnels or areas with EM interference.
+-  Each principal axis (pitch, roll, yaw) translates to accelerometer, gyroscope, and magnetometer.
+-  Place smallest decoupling capacitors closest to pin first because smaller capacities filter out higher frequencies, which could travel across board.
   
 ## Goals
 
