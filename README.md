@@ -46,7 +46,6 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 
 The STM32F405 was selected because it provides:
 - Sufficient processing power for flight control
-- Native USB support
 - Compatibility with ArduPilot
 - Large community support
 
@@ -55,7 +54,7 @@ The STM32F405 was selected because it provides:
 SPI was selected over I2C due to:
 - Higher bandwidth
 - Lower latency
-- Better reliability for high-rate sensor data
+- Noise immunity
 
 ## Lessons Learned
 
