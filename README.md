@@ -61,7 +61,7 @@ SPI was selected over I2C due to:
 - SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag.
 -  IMU enhances GPS reliability in tunnels or areas with EM interference.
 -  Each principal axis (pitch, roll, yaw) translates to accelerometer, gyroscope, and magnetometer.
--  Place smallest decoupling capacitors closest to pin first because smaller capacities filter out higher frequencies, which could travel across board.
+-  Place smallest decoupling capacitors closest to pin to minimize trace inductance. Smaller capacitors filter high frequency noise, and inductive impedance is proportial to frequency.
   
 ## Goals
 
