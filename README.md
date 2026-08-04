@@ -39,7 +39,8 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
   - [ ] Flight test
 
 ![PCB Progress - IMU](images/IMU-layout.png)
-![PCB Progress - Schematic](images/FC_Schematic_8-02.png)
+![PCB Progress - Schematic](images/FC_Schematic1_8-04.png)
+![PCB Progress - Schematic](images/FC_Schematic2_8-04.png)
 
 ## Design Decisions
 
@@ -59,10 +60,11 @@ SPI was selected over I2C due to:
 
 ## Lessons Learned
 
-- SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag.
+- SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag. SPI needs pull up resistors for CS since it sets CS low to select devices. Use GPIO for CS instead of built-in NSS so that ArduPilot can handle CS lines through software.
 -  IMU enhances GPS reliability in tunnels or areas with EM interference.
 -  Each principal axis (pitch, roll, yaw) translates to accelerometer, gyroscope, and magnetometer.
 -  Place smallest decoupling capacitors closest to pin to minimize trace inductance. Smaller capacitors filter high frequency noise, and inductive impedance is proportial to frequency.
+-  Vref serves as a precise baseline voltage for ADCs and DACs, isolating noise and maintaining consistent voltage.
   
 ## Goals
 
