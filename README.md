@@ -41,6 +41,7 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 ![PCB Progress - IMU](images/IMU-layout.png)
 ![PCB Progress - Schematic](images/FC_Schematic1_8-04.png)
 ![PCB Progress - Schematic](images/FC_Schematic2_8-04.png)
+![PCB Progress - Schematic](images/FC_Schematic_8-05.png)
 
 ## Design Decisions
 
@@ -65,6 +66,7 @@ SPI was selected over I2C due to:
 -  Each principal axis (pitch, roll, yaw) translates to accelerometer, gyroscope, and magnetometer.
 -  Place smallest decoupling capacitors closest to pin to minimize trace inductance. Smaller capacitors filter high frequency noise, and inductive impedance is proportial to frequency.
 -  Vref serves as a precise baseline voltage for ADCs and DACs, isolating noise and maintaining consistent voltage.
+-  ESD protection for USB connector as TVS array, where TVS diodes acts as an open circuit when operating voltage is normal. When a voltage spike occurs, it acts as a short circuit to sink high current and clamps D+/D-.
   
 ## Goals
 
