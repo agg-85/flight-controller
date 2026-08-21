@@ -45,19 +45,12 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 
 ## Design Decisions
 
-### Why STM32F405?
+### STM32F405
 
 The STM32F405 was selected because it provides:
 - Sufficient processing power for flight control
 - Compatibility with ArduPilot
 - Large community support
-
-### Why SPI for IMU?
-
-SPI was selected over I2C due to:
-- Higher bandwidth
-- Lower latency
-- Noise immunity
 
 ## Lessons Learned
 
@@ -67,6 +60,8 @@ SPI was selected over I2C due to:
 -  Place smallest decoupling capacitors closest to pin to minimize trace inductance. Smaller capacitors filter high frequency noise, and inductive impedance is proportial to frequency.
 -  Vref serves as a precise baseline voltage for ADCs and DACs, isolating noise and maintaining consistent voltage.
 -  ESD protection for USB connector as TVS array, where TVS diodes acts as an open circuit when operating voltage is normal. When a voltage spike occurs, it acts as a short circuit to sink high current and clamps D+/D-.
+-  NRST puts chip in known state (setting registers to default), used to activate bootloader when flashing new program (ex: through SWD interface)
+-  SWD bypasses bootloader and can reset and flash MCU directly
   
 ## Goals
 
