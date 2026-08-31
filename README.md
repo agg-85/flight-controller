@@ -62,6 +62,7 @@ The STM32F405 was selected because it provides:
 -  ESD protection for USB connector as TVS array, where TVS diodes acts as an open circuit when operating voltage is normal. When a voltage spike occurs, it acts as a short circuit to sink high current and clamps D+/D-.
 -  NRST puts chip in known state (setting registers to default), used to activate bootloader when flashing new program (ex: through SWD interface)
 -  SWD bypasses bootloader and can reset and flash MCU directly
+-  BOOT0 needs pull-down resistor to avoid floating. DFU mode is entered when BOOT0 is high, and BOOT1 can be permanently tied to ground.
   
 ## Goals
 
