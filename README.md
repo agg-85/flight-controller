@@ -19,10 +19,14 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 ## Status
 
 - [ ] Hardware
-  - [x] Select MCU
-  - [x] Select IMU
-  - [x] Select Barometer
-  - [ ] Select connectors
+  - [x] MCU Decoupling
+  - [x] IMU Wiring
+  - [x] Barometer Wiring
+  - [X] USB-C Connection
+  - [X] ESD Protection
+  - [X] SWD Headers
+  - [ ] Power management
+  - [ ] ESC Pads
   - [ ] Complete schematic
   - [ ] PCB layout
   - [ ] Design review
@@ -46,12 +50,12 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 
 ### STM32F405
 
-The STM32F405 was selected because it provides:
+The STM32F405 was selected because:
 - Sufficient processing power for flight control
 - Compatibility with ArduPilot
-- Large community support
+- Used in most commercial FCs, providing abundant documentation and examples
 
-## Lessons Learned
+## Takeaways
 
 - SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag. SPI needs pull up resistors for CS since it sets CS low to select devices. Use GPIO for CS instead of built-in NSS so that ArduPilot can handle CS lines through software.
 -  IMU enhances GPS reliability in tunnels or areas with EM interference.
