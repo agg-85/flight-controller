@@ -39,9 +39,8 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
   - [ ] Flight test
 
 ![PCB Progress - IMU](images/IMU-layout.png)
-![PCB Progress - Schematic](images/FC_Schematic1_8-04.png)
-![PCB Progress - Schematic](images/FC_Schematic2_8-04.png)
-![PCB Progress - Schematic](images/FC_Schematic_8-05.png)
+![PCB Progress - Schematic](images/FC-schematic-9-13)
+![PCB Progress - Schematic](images/FC-layout-9-13)
 
 ## Design Decisions
 
