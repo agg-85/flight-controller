@@ -12,7 +12,7 @@ A custom STM32-based flight controller designed from the ground up for quadcopte
 ## Hardware
 | Component | Part |
 |-----------|------|
-| MCU | STM32F405 |
+| MCU | STM32F405, 168MHz, 1MB Flash |
 | IMU | ICM-42688-P |
 | Barometer | MS5611 |
 
