@@ -54,7 +54,7 @@ The STM32F405 was selected because:
 - Compatibility with ArduPilot
 - Used in most commercial FCs, providing abundant documentation and examples
 
-## Takeaways
+## Takeaways/Useful Facts
 
 - SPI facilitates DMA, which offloads data transfers from the main MCU. This prevents processor lag. SPI needs pull up resistors for CS since it sets CS low to select devices. Use GPIO for CS instead of built-in NSS so that ArduPilot can handle CS lines through software.
 -  IMU enhances GPS reliability in tunnels or areas with EM interference.
