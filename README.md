@@ -1,4 +1,4 @@
-# Custom Flight Controller
+# STM32 Flight Controller Project
 A custom STM32-based flight controller designed from the ground up for quadcopters. This project includes PCB design using KiCad and embedded firmware using Ardupilot.
 
 ## Features
